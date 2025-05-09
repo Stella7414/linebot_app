@@ -4,6 +4,7 @@ from linebot.exceptions import InvalidSignatureError
 from config import LINE_CHANNEL_ACCESS_TOKEN, LINE_CHANNEL_SECRET
 from handlers.message_handler import handle_message
 from handlers.location_handler import handle_location
+from services.restaurant_search import search_restaurants
 
 app = Flask(__name__)
 line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
